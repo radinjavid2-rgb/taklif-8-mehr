@@ -72,12 +72,10 @@ favorite = input("Ki jayeze-ye avval ro bebare? (agar hich kas, faghat Enter): "
 if favorite == "":
     favorite = None
 
-# agar list khali bood, barname tamoom mishe
 if len(people) == 0 or len(prizes) == 0:
     print("List-e afrad ya jayeze-ha khali ast!")
     exit()
 
-# agar esm-e favorite tooye list nabood, ghore-keshi adilane mishe
 if favorite is not None and favorite not in people:
     print("In esm tooye list nist, pas ghore-keshi adilane anjam mishe.")
     favorite = None
@@ -109,7 +107,6 @@ lower = string.ascii_lowercase      # horoof-e koochak
 digits = string.digits              # adad
 symbols = "!@#$%^&*"                # alayem
 
-# yeki az har no, ba'd baghie tasadofi
 password = [
     random.choice(upper),
     random.choice(lower),
