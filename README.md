@@ -48,7 +48,6 @@ ________________________________________________________________________________
 import random
 import string
 
-# ---------- 1) gereftan-e ettelaat az shoma ----------
 people = []
 print("Esm-e afrad ro yeki yeki benevisid.")
 print("Vaghti tamoom shod, faghat Enter bezanid.")
@@ -85,7 +84,6 @@ if favorite is not None and favorite not in people:
 
 winners = {}  # inja minevisim ki chi bord
 
-# ---------- 2) ghore-keshi ----------
 if favorite in people:
     winners[favorite] = prizes[0]                      # nafar-e makhsoos, behtarin jayeze
     other_people = [p for p in people if p != favorite]
@@ -101,13 +99,11 @@ count = min(len(other_people), len(other_prizes))
 for i in range(count):
     winners[other_people[i]] = other_prizes[i]
 
-# ---------- 3) namayesh-e natije ----------
 print()
 print("*** Natije-ye Ghore-Keshi ***")
 for person in people:
     print(person, ":", winners.get(person, "Jayeze-i nabord"))
 
-# ---------- 4) ramz-e 18 karakteri ----------
 upper = string.ascii_uppercase      # horoof-e bozorg
 lower = string.ascii_lowercase      # horoof-e koochak
 digits = string.digits              # adad
